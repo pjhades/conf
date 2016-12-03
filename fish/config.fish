@@ -1,4 +1,6 @@
 function fish_prompt --description 'Write out the prompt'
+    set -l last_status $status
+
     # Just calculate this once, to save a few cycles when displaying the prompt
     if not set -q __fish_prompt_hostname
         set -g __fish_prompt_hostname (hostname|cut -d . -f 1)
@@ -16,7 +18,11 @@ function fish_prompt --description 'Write out the prompt'
         set suffix '#'
     case '*'
         set color_cwd $fish_color_cwd
-        set suffix '❯❯❯'
+        if [ $last_status -eq 1 ]
+            set suffix (set_color red)'❯❯❯'
+        else
+            set suffix '❯'(set_color cyan)'❯'(set_color blue)'❯'
+        end
     end
 
     echo -n -s (set_color yellow)"$USER"(set_color normal) \
