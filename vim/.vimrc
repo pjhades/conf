@@ -5,7 +5,6 @@ filetype off
 set runtimepath+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'fatih/vim-go'
 Plugin 'dag/vim-fish'
 Plugin 'vim-erlang/vim-erlang-runtime'
 call vundle#end()
@@ -13,13 +12,11 @@ filetype plugin indent on
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 let g:vim_markdown_folding_disabled = 1
-Plugin 'Lokaltog/vim-powerline'
 Plugin 'scrooloose/nerdtree'
 let g:NERDTreeDirArrows = 1
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 Plugin 'flazz/vim-colorschemes'
-Plugin 'leafgarland/typescript-vim'
 
 syntax enable
 syntax on
@@ -67,4 +64,4 @@ nnoremap tn :tabnext<CR>
 nnoremap tp :tabprev<CR>
 
 set t_Co=256
-colorscheme gruvbox
+colorscheme jellybeans
