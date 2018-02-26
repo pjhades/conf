@@ -1,4 +1,7 @@
-PS1='\[\e[1;32m\]\u\[\e[0m\] \[\e[1;77m\]@\[\e[0m\] \[\e[1;35m\]\h\[\e[0m\]: \[\e[1;33m\]\W\[\e[0m\] \[\e[1;77m\]→ \[\e[0m\]'
+. ~/.git-completion.bash
+. ~/.git-prompt.sh
+
+PS1='\[\e[1;32m\]\u\[\e[0m\] \[\e[1;77m\]@\[\e[0m\] \[\e[1;35m\]\h\[\e[0m\]:$(__git_ps1 " (%s)") \[\e[1;33m\]\W\[\e[0m\] \[\e[1;77m\]→ \[\e[0m\]'
 PS2='\[\e[1;31m\]>\[\e[0m\] '
 
 PROMPT_COMMAND=echo
@@ -32,3 +35,9 @@ if [ -n "$TMUX" ]; then
     export TERM="screen-256color"
 fi
 
+if [ ${SSH_AGENT_PID:-null} != null ]; then
+    ssh-add -l &>/dev/null
+    if [ $? -eq 1 ]; then
+        ssh-add
+    fi
+fi
