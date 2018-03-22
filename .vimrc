@@ -26,12 +26,6 @@ set fileencoding=utf-8
 
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
-"au BufNewFile,BufRead *.md set expandtab
-"au BufNewFile,BufRead *.go set filetype=go
-"au BufNewFile,BufRead *.gemspec set filetype=ruby
-"au BufNewFile,BufRead *.ts set syntax=typescript
-"au BufNewFile,BufRead *.coffee set syntax=coffee
-
 au FileType makefile set noexpandtab
 au FileType python set indentkeys-=<:>
 au FileType scheme set lisp
@@ -64,4 +58,4 @@ nnoremap tn :tabnext<CR>
 nnoremap tp :tabprev<CR>
 
 set t_Co=256
-colorscheme jellybeans
+colorscheme lxvc
