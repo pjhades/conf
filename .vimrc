@@ -17,6 +17,12 @@ let g:NERDTreeDirArrows = 1
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'wlangstroth/vim-racket'
+Plugin 'rust-lang/rust.vim'
+Plugin 'cespare/vim-toml'
+Plugin 'xolox/vim-colorscheme-switcher'
+Plugin 'xolox/vim-misc'
+Plugin 'guersam/vim-j'
 
 syntax enable
 syntax on
@@ -24,11 +30,14 @@ syntax on
 set encoding=utf-8
 set fileencoding=utf-8
 
-autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-
-au FileType makefile set noexpandtab
-au FileType python set indentkeys-=<:>
-au FileType scheme set lisp
+au BufNewFile,BufReadPost *.md set filetype=markdown
+au BufNewFile,BufReadPost *.rkt,*.rktl set filetype=racket
+au BufNewFile,BufReadPost *.rs set filetype=rust
+au BufNewFile,BufReadPost *.toml set filetype=toml
+au BufNewFile,BufReadPost *.ijs set filetype=j
+au filetype makefile set noexpandtab
+au filetype python set indentkeys-=<:>
+au filetype scheme,racket set lisp
 
 set laststatus=2
 set number
@@ -58,4 +67,4 @@ nnoremap tn :tabnext<CR>
 nnoremap tp :tabprev<CR>
 
 set t_Co=256
-colorscheme lxvc
+colorscheme kolor
