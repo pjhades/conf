@@ -4,7 +4,6 @@ filetype off
 
 set runtimepath+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'kchmck/vim-coffee-script'
 Plugin 'dag/vim-fish'
 Plugin 'vim-erlang/vim-erlang-runtime'
 call vundle#end()
@@ -17,12 +16,11 @@ let g:NERDTreeDirArrows = 1
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 Plugin 'flazz/vim-colorschemes'
-Plugin 'wlangstroth/vim-racket'
 Plugin 'rust-lang/rust.vim'
 Plugin 'cespare/vim-toml'
 Plugin 'xolox/vim-colorscheme-switcher'
 Plugin 'xolox/vim-misc'
-Plugin 'guersam/vim-j'
+Plugin 'justinmk/vim-syntax-extra'
 
 syntax enable
 syntax on
@@ -67,4 +65,4 @@ nnoremap tn :tabnext<CR>
 nnoremap tp :tabprev<CR>
 
 set t_Co=256
-colorscheme kolor
+colorscheme apprentice
