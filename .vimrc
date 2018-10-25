@@ -20,7 +20,7 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'cespare/vim-toml'
 Plugin 'xolox/vim-colorscheme-switcher'
 Plugin 'xolox/vim-misc'
-Plugin 'justinmk/vim-syntax-extra'
+Plugin 'jaxbot/semantic-highlight.vim'
 
 syntax enable
 syntax on
