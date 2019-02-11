@@ -1,5 +1,6 @@
+set -xg PATH ~/.cargo/bin $PATH
+
 function fish_prompt --description 'Write out the prompt'
-    set -xg PATH ~/.cargo/bin ~/code/rtfsc/cc65/bin $PATH
     set -l last_status $status
 
     # Just calculate this once, to save a few cycles when displaying the prompt
