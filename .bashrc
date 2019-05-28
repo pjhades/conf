@@ -1,7 +1,7 @@
 . ~/.git-completion.bash
 . ~/.git-prompt.sh
 
-PS1='\[\e[1;32m\]\W\[\e[0m\]:$(__git_ps1 " (%s)")\[\e[1;77m\]\$\[\e[0m\] '
+PS1='\[\e[1;32m\]\W\[\e[0m\]\[\e[1;35m\]$(__git_ps1 " (%s)")\[\e[0m\]\[\e[1;77m\] \$\[\e[0m\] '
 PS2='\[\e[1;77m\]>\[\e[0m\] '
 
 PROMPT_COMMAND=echo
