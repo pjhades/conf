@@ -1,0 +1,6 @@
+[submodule "vim/.vim/pack/pjhades/start/vim-colorschemes"]
+	path = vim/.vim/pack/pjhades/start/vim-colorschemes
+	url = https://github.com/flazz/vim-colorschemes.git
+[submodule "vim/.vim/pack/pjhades/start/nerdtree"]
+	path = vim/.vim/pack/pjhades/start/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
