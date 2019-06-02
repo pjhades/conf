@@ -1,0 +1,9 @@
+#!/bin/bash
+
+xset r rate 270 30
+xrandr --dpi 190
+
+ibus-daemon &
+export GTK_IM_MODULE=ibus
+export QT_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
