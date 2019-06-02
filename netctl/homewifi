@@ -1,0 +1,14 @@
+Description='Connect home wifi'
+Interface=wlp3s0
+Connection=wireless
+NETCTL_DEBUG=yes
+
+Security=wpa
+IP=dhcp
+IP6=no
+DHCPClient=dhcpcd
+TimeoutDHCP=10
+ESSID=''
+Key=''
+Hidden=yes
+Priority=10
