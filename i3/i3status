@@ -1,0 +1,35 @@
+general {
+    output_format = "i3bar"
+    colors = true
+    color_good = "#00D300"
+    color_degraded = "#CECE00"
+    color_bad = "#BC0000"
+    interval = 15
+}
+
+order += "cpu_usage"
+order += "cpu_temperature 0"
+order += "wireless _first_"
+order += "battery all"
+order += "tztime local"
+
+wireless _first_ {
+    format_up = "%ip"
+    format_down = "✗ wireless"
+}
+
+battery all {
+    format = "⚡%status %percentage %remaining"
+}
+
+tztime local {
+    format = "%Y-%m-%d %H:%M"
+}
+
+cpu_usage {
+    format = "CPU %usage"
+}
+
+cpu_temperature 0 {
+    format = "%degrees °C"
+}
