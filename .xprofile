@@ -2,6 +2,7 @@
 
 xset r rate 270 30
 xrandr --dpi 190
+xbacklight -set 50
 
 ibus-daemon &
 export GTK_IM_MODULE=ibus
