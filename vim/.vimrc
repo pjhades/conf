@@ -14,7 +14,6 @@ set fileencoding=utf-8
 
 au BufNewFile,BufReadPost *.md set filetype=markdown
 au BufNewFile,BufReadPost *.rkt,*.rktl set filetype=racket
-au BufNewFile,BufReadPost *.rs set filetype=rust
 au BufNewFile,BufReadPost *.toml set filetype=toml
 au BufNewFile,BufReadPost *.ijs set filetype=j
 au filetype makefile set noexpandtab
