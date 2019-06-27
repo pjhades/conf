@@ -10,6 +10,8 @@ font pango:monospace 11
 bindsym $mod+Shift+c reload
 # restart inplace
 bindsym $mod+Shift+r restart
+# lock screen
+bindsym $mod+Shift+l exec "i3lock -n -f -c 3399bb"
 # logout
 bindsym $mod+Escape exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
