@@ -90,6 +90,12 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
+# move container to output
+bindsym $mod+Shift+Left move container to output left
+bindsym $mod+Shift+Right move container to output right
+bindsym $mod+Shift+Up move container to output up
+bindsym $mod+Shift+Down move container to output down
+
 # main color theme
 # class                 border  bground text    indicator child_border
 client.focused          #A16616 #A16616 #FFFFFF #2E9EF4   #285577
