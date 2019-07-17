@@ -3,7 +3,7 @@ set $mod Mod4
 # use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 # font for window titles and bar
-font pango:monospace 11
+font pango:mononoki 11
 
 
 # reload config
@@ -111,7 +111,7 @@ bar {
     mode dock
     status_command i3status --config ~/.config/i3/i3status
     position bottom
-    font pango:monospace 11
+    font pango:mononoki 11
     workspace_buttons yes
     colors {
         background #222222

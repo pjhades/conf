@@ -29,6 +29,7 @@ set nowrapscan
 set nobackup
 set nowrap
 set autoindent
+set smartindent
 set shiftwidth=4
 set tabstop=4
 set expandtab
