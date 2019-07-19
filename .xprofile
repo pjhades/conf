@@ -3,7 +3,7 @@
 xset r rate 270 30
 xrandr --dpi 190
 xbacklight -set 60
-xautolock -time 5 -locker 'i3lock --nofork --show-failed-attempts --color 3399bb' &
+xautolock -time 5 -locker 'i3lock --nofork --show-failed-attempts --color 121212' &
 
 export GTK_IM_MODULE=ibus
 export QT_IM_MODULE=ibus
