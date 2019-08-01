@@ -24,8 +24,8 @@ bindsym $mod+space exec rofi -theme glue_pro_blue -show run
 bindsym $mod+Tab exec rofi -theme glue_pro_blue -show window
 
 # change keyboard backlight
-bindsym XF86KbdBrightnessDown exec "~/scripts/keyboard-backlight.py down"
-bindsym XF86KbdBrightnessUp exec "~/scripts/keyboard-backlight.py up"
+bindsym XF86KbdBrightnessDown exec "~/scripts/keyboard-backlight.py 10-"
+bindsym XF86KbdBrightnessUp exec "~/scripts/keyboard-backlight.py 10+"
 # change screen brightness
 bindsym XF86MonBrightnessDown exec "xbacklight -dec 10"
 bindsym XF86MonBrightnessUp exec "xbacklight -inc 10"
