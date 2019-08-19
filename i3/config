@@ -1,3 +1,8 @@
+# i don't know why but putting this in .xprofile
+# will require a restart of ibus-daemon to load
+# the user configuration (font size in my case)
+exec --no-startup-id ibus-daemon -drx
+
 # command key on mac
 set $mod Mod4
 # use Mouse+$mod to drag floating windows to their wanted position
@@ -15,7 +20,7 @@ bindsym $mod+Shift+l exec "i3lock -n -f -c 121212"
 bindsym $mod+Shift+Escape exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec termite
 # kill focused window
 bindsym $mod+Shift+q kill
 # app launcher
