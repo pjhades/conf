@@ -3,3 +3,5 @@
 	name = Jing Peng
 [core]
 	editor = vim
+[pull]
+    rebase = true
