@@ -30,11 +30,6 @@ export LESS_TERMCAP_so=$'\E[01;48;5;52m' # command line
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;38;5;68m' # option argument
 
-# fuck the fn key binding under tmux
-if [ -n "$TMUX" ]; then
-    export TERM="screen-256color"
-fi
-
 if [ ${SSH_AGENT_PID:-null} != null ]; then
     ssh-add -l &>/dev/null
     if [ $? -eq 1 ]; then
