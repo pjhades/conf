@@ -6,6 +6,12 @@ let g:NERDTreeDirArrows = 1
 let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
 
+let g:grepper = {
+    \ 'tools': ['rg'],
+    \ 'rg': {
+    \     'grepprg': 'rg -nHP --no-heading --vimgrep',
+    \ }}
+
 syntax enable
 syntax on
 
@@ -14,11 +20,11 @@ set fileencoding=utf-8
 
 au BufNewFile,BufReadPost *.md set filetype=markdown
 au BufNewFile,BufReadPost *.rkt,*.rktl set filetype=racket
-au BufNewFile,BufReadPost *.toml set filetype=toml
 au BufNewFile,BufReadPost *.ijs set filetype=j
 au filetype makefile set noexpandtab
 au filetype python set indentkeys-=<:>
 au filetype scheme,racket set lisp
+au filetype c,cpp set cindent
 
 set laststatus=2
 set number
@@ -49,4 +55,4 @@ nnoremap tn :tabnext<CR>
 nnoremap tp :tabprev<CR>
 
 set t_Co=256
-colorscheme apprentice
+colorscheme kalahari
