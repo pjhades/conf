@@ -97,9 +97,7 @@ chatnets = {
     max_msgs = "4";
     max_whois = "1";
   };
-  Arkham = {
-    type = "IRC";
-  };
+  Arkham = { type = "IRC"; };
   #GameSurge = {
   #  type = "IRC";
   #  max_kicks = "1";
@@ -147,16 +145,8 @@ chatnets = {
 };
 
 channels = (
-  { 
-    name = "#adgear-shitpost";
-    chatnet = "Freenode";
-    autojoin = "Yes";
-  },
-  {
-    name = "#madgear";
-    chatnet = "Arkham";
-    autojoin = "Yes";
-  }
+  { name = "#monadgear"; chatnet = "Freenode"; autojoin = "Yes"; },
+  { name = "#madgear"; chatnet = "Arkham"; autojoin = "Yes"; }
 );
 
 aliases = {
@@ -312,10 +302,10 @@ statusbar = {
   };
 };
 settings = {
-  core = {
+  core = { 
     real_name = "jiji";
     user_name = "jing.peng";
-    nick = "jingjingjing";
+    nick = "jingjing";
   };
   "fe-text" = { actlist_sort = "refnum"; };
 };
