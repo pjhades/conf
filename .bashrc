@@ -1,10 +1,8 @@
 . ~/.git-completion.bash
 . ~/.git-prompt.sh
 
-PS1='\[\e[1;33m\]\h\[\e[0m\] \[\e[1;32m\]\W\[\e[0m\]\[\e[1;35m\]$(__git_ps1 " (%s)")\[\e[0m\]\[\e[1;77m\] \$\[\e[0m\] '
+PS1='\[\e[2;95m\]\t\[\e[0m\]:\[\e[1;33m\]\h\[\e[0m\]:\[\e[1;32m\]\W\[\e[0m\]\[\e[1;35m\]$(__git_ps1 " (%s)")\[\e[0m\]\[\e[1;77m\] \$\[\e[0m\] '
 PS2='\[\e[1;77m\]>\[\e[0m\] '
-
-PROMPT_COMMAND=echo
 
 [ -z "$PS1" ] && return
 
