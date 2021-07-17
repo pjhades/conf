@@ -2,9 +2,10 @@ servers = (
   {
     address = "mitochondrion.local";
     chatnet = "bouncer";
-    port = "6667";
-    use_tls = "yes";
-    tls_verify = "yes";
+    port = "6767";
+    password = "<username>:<password>";
+    use_tls = "no";
+    tls_verify = "no";
   },
   {
     address = "irc.libera.chat";
@@ -12,17 +13,14 @@ servers = (
     port = "6697";
     use_tls = "yes";
     tls_verify = "yes";
-  },
+  }
 );
 
-chatnets = {
-  bouncer = { type = "IRC"; };
-  libera = { type = "IRC"; };
-};
+chatnets = { bouncer = { type = "IRC"; }; libera = { type = "IRC"; }; };
 
 channels = (
   { name = "#madgear"; chatnet = "bouncer"; autojoin = "Yes"; },
-  { name = "#monadgear"; chatnet = "libera"; autojoin = "Yes"; },
+  { name = "#monadgear"; chatnet = "libera"; autojoin = "Yes"; }
 );
 
 aliases = {
@@ -178,10 +176,6 @@ statusbar = {
   };
 };
 settings = {
-  core = { 
-    real_name = "jiji";
-    user_name = "pjhades";
-    nick = "jingjing";
-  };
+  core = { real_name = "jiji"; user_name = "pjhades"; nick = "jingjing"; };
   "fe-text" = { actlist_sort = "refnum"; };
 };
