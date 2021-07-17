@@ -1,8 +1,8 @@
 servers = (
   {
-    address = "chat.freenode.net";
-    chatnet = "Freenode";
-    port = "6697";
+    address = "mitochondrion.local";
+    chatnet = "bouncer";
+    port = "6667";
     use_tls = "yes";
     tls_verify = "yes";
   },
@@ -13,25 +13,16 @@ servers = (
     use_tls = "yes";
     tls_verify = "yes";
   },
-  {
-    address = "arkham.hypercomplex.net";
-    chatnet = "Arkham";
-    port = "6667";
-    #use_tls = "yes";
-    #tls_verify = "yes";
-  },
 );
 
 chatnets = {
-  Freenode = { type = "IRC"; };
-  Arkham = { type = "IRC"; };
+  bouncer = { type = "IRC"; };
   libera = { type = "IRC"; };
 };
 
 channels = (
-  { name = "#monadgear"; chatnet = "Freenode"; autojoin = "Yes"; },
+  { name = "#madgear"; chatnet = "bouncer"; autojoin = "Yes"; },
   { name = "#monadgear"; chatnet = "libera"; autojoin = "Yes"; },
-  { name = "#madgear"; chatnet = "Arkham"; autojoin = "Yes"; }
 );
 
 aliases = {
