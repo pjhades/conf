@@ -10,6 +10,3 @@
 [submodule "vim/.vim/pack/pjhades/start/vim-grepper"]
 	path = vim/.vim/pack/pjhades/start/vim-grepper
 	url = https://github.com/mhinz/vim-grepper.git
-[submodule "vim/.vim/pack/pjhades/start/c.vim"]
-	path = vim/.vim/pack/pjhades/start/c.vim
-	url = git@github.com:pulkomandy/c.vim.git
