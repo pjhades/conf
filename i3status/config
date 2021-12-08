@@ -17,30 +17,30 @@ order += "wireless _first_"
 order += "tztime local"
 
 wireless _first_ {
-    format_up = "%ip"
-    format_down = "wifi down"
+    format_up = "NET %ip"
+    format_down = "wifi down"
 }
 
 battery all {
     format = "%status %percentage %remaining"
-    status_chr = ""
-    status_bat = ""
-    status_full = ""
+    status_chr = "CHR"
+    status_bat = "BAT"
+    status_full = "FUL"
 }
 
 volume master {
-    format = "%volume"
-    format_muted = "muted"
+    format = "VOL %volume"
+    format_muted = "muted"
 }
 
 tztime local {
-    format = "%Y-%m-%d %H:%M"
+    format = "%A %Y-%m-%d %H:%M"
 }
 
 cpu_usage {
-    format = "%usage"
+    format = "CPU %usage"
 }
 
 cpu_temperature 0 {
-    format = "%degrees°C"
+    format = "TMP %degrees°C"
 }
