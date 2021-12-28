@@ -4,3 +4,4 @@ patch:
   "style/font_point": 11
   schema_list:
     - schema: luna_pinyin
+    - schema: double_pinyin_flypy
