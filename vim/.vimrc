@@ -6,11 +6,8 @@ let g:NERDTreeDirArrows = 1
 let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
 
-let g:grepper = {
-    \ 'tools': ['rg'],
-    \ 'rg': {
-    \     'grepprg': 'rg -nHP --no-heading --vimgrep',
-    \ }}
+let g:fzf_preview_window = ['up:50%']
+let g:fzf_layout = {'right': '100%'}
 
 syntax enable
 syntax on
