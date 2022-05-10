@@ -7,9 +7,3 @@
 [submodule "vim/.vim/pack/pjhades/start/rust"]
 	path = vim/.vim/pack/pjhades/start/rust
 	url = https://github.com/rust-lang/rust.vim.git
-[submodule "vim/.vim/pack/pjhades/start/vim-grepper"]
-	path = vim/.vim/pack/pjhades/start/vim-grepper
-	url = https://github.com/mhinz/vim-grepper.git
-[submodule "vim/.vim/pack/pjhades/start/vim-cpp-modern"]
-	path = vim/.vim/pack/pjhades/start/vim-cpp-modern
-	url = git@github.com:bfrg/vim-cpp-modern.git
