@@ -7,3 +7,6 @@
 [submodule "vim/.vim/pack/pjhades/start/rust"]
 	path = vim/.vim/pack/pjhades/start/rust
 	url = https://github.com/rust-lang/rust.vim.git
+[submodule "vim/.vim/pack/pjhades/start/fzf.vim"]
+	path = vim/.vim/pack/pjhades/start/fzf.vim
+	url = https://github.com/junegunn/fzf.vim
