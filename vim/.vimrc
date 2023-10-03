@@ -1,6 +1,16 @@
+call plug#begin()
+Plug 'preservim/nerdtree'
+Plug 'junegunn/fzf'
+Plug 'flazz/vim-colorschemes'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'rust-lang/rust.vim'
+call plug#end()
+
 set shell=bash
 set nocompatible
 filetype off
+
+set rtp+=/usr/local/opt/fzf
 
 let g:NERDTreeDirArrows = 1
 let g:NERDTreeDirArrowExpandable = '+'
@@ -51,5 +61,15 @@ nmap <C-\>r :cs reset<CR>
 nnoremap tn :tabnext<CR>
 nnoremap tp :tabprev<CR>
 
+inoremap <C-\>{ {<CR>}<Esc>O
+
 set t_Co=256
-colorscheme kalahari
+colorscheme janah
+
+if executable('rust-analyzer')
+  au User lsp_setup call lsp#register_server({
+        \   'name': 'Rust Language Server',
+        \   'cmd': {server_info->['rust-analyzer']},
+        \   'whitelist': ['rust'],
+        \ })
+endif
