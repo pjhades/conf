@@ -10,3 +10,6 @@
 [submodule "vim/.vim/pack/pjhades/start/fzf.vim"]
 	path = vim/.vim/pack/pjhades/start/fzf.vim
 	url = https://github.com/junegunn/fzf.vim
+[submodule "vim/.vim/pack/pjhades/start/vim-lsp"]
+	path = vim/.vim/pack/pjhades/start/vim-lsp
+	url = git@github.com:prabirshrestha/vim-lsp.git
