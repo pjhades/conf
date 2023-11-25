@@ -1,9 +1,10 @@
 call plug#begin()
 Plug 'preservim/nerdtree'
-Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'rust-lang/rust.vim'
+Plug 'fatih/vim-go'
 call plug#end()
 
 set shell=bash
@@ -28,7 +29,10 @@ if executable('rust-analyzer')
     au User lsp_setup call lsp#register_server({
         \   'name': 'Rust Language Server',
         \   'cmd': {server_info->['rust-analyzer']},
-        \   'whitelist': ['rust'],
+        \   'allowlist': ['rust'],
+        \   'initialization_options': {
+        \     'checkOnSave': v:false,
+        \   },
         \ })
 endif
 
@@ -91,6 +95,12 @@ if filereadable("cscope.out")
     nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
     nmap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>
     nmap <C-\>r :cs reset<CR>
+endif
+
+if &filetype ==# 'go'
+    nmap <C-\>d :GoDef<CR>
+    nmap <C-\>c :GoCallers<CR>
+    nmap <C-\>r :GoReferrers<CR>
 endif
 
 nnoremap tn :tabnext<CR>
