@@ -1,0 +1,13 @@
+[Match]
+MACAddress=b8:27:eb:cd:df:c4
+
+[Link]
+Multicast=yes
+
+[Network]
+Address=192.168.0.103
+Gateway=192.168.0.1
+DNS=8.8.8.8
+#DHCP=yes
+DNSSEC=no
+MulticastDNS=yes

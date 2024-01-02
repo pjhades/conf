@@ -1,0 +1,11 @@
+# /dev/mmcblk0p2
+UUID=a55ffd72-1a75-48e9-a8be-138ed4c8a9f3	/         	ext4      	rw,norelatime,discard	0 1
+
+# /dev/mmcblk0p1
+UUID=E78E-C95D      	/boot     	vfat      	rw,norelatime,discard,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,errors=remount-ro	0 2
+
+# Old disk
+UUID=476a71b2-6acd-4780-92dd-05431130be5f	/mnt/old-disk	ext4	rw,norelatime,x-systemd.device-timeout=30s,x-systemd.mount-timeout=30s	0	0
+
+# Bind mount to only expose the samba subdirectory
+/mnt/old-disk/samba /srv/samba none bind

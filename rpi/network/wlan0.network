@@ -1,0 +1,10 @@
+[Match]
+MACAddress=b8:27:eb:98:8a:91
+
+[Link]
+Multicast=yes
+
+[Network]
+DHCP=yes
+DNSSEC=no
+MulticastDNS=yes
