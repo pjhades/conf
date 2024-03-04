@@ -14,6 +14,8 @@ filetype off
 
 set rtp+=/usr/local/opt/fzf
 
+let g:rustfmt_autosave = 1
+
 let g:lsp_document_code_action_signs_enabled = 0
 let g:lsp_diagnostics_enabled = 1
 let g:lsp_diagnostics_highlights_enabled = 0
@@ -72,6 +74,7 @@ au filetype makefile set noexpandtab
 au filetype python set indentkeys-=<:>
 au filetype scheme,racket set lisp
 au filetype c,cpp set cindent
+au filetype go call SetVimGoKeyBindings()
 
 set laststatus=2
 set number
@@ -97,11 +100,11 @@ if filereadable("cscope.out")
     nmap <C-\>r :cs reset<CR>
 endif
 
-if &filetype ==# 'go'
+function! SetVimGoKeyBindings()
     nmap <C-\>d :GoDef<CR>
     nmap <C-\>c :GoCallers<CR>
     nmap <C-\>r :GoReferrers<CR>
-endif
+endfunction
 
 nnoremap tn :tabnext<CR>
 nnoremap tp :tabprev<CR>
