@@ -1,0 +1,6 @@
+configuration {
+    modi: "window,drun,combi";
+    font: "Roboto Mono 18";
+    combi-modi: "window,drun";
+}
+@theme "solarized"

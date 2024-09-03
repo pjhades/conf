@@ -4,4 +4,4 @@ export TERMINAL=alacritty
 
 xset r rate 270 30
 xautolock -time 15 -locker 'i3lock --nofork --show-failed-attempts --color 121212' &
-feh --bg-center pic/desktop.jpg
+feh --bg-scale ~/pics/desktop

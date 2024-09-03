@@ -1,0 +1,7 @@
+patch:
+  "menu/page_size": 9
+  "style/font_face": "monospace"
+  "style/font_point": 11
+  schema_list:
+    - schema: luna_pinyin
+    - schema: double_pinyin_flypy

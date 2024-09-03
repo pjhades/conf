@@ -1,6 +1,6 @@
 set $mod Mod4
 
-font pango:Sans 16
+font pango:Noto Sans 12
 
 # terminal
 bindsym $mod+Return exec i3-sensible-terminal
@@ -23,13 +23,13 @@ bindsym $mod+Shift+e exec \
      -t warning \
      -m 'End X session?' \
      -B 'Yes' 'i3-msg exit' \
-     -f 'pango:Sans 16'"
+     -f 'pango:Roboto Mono 16'"
 
 # lock screen
 bindsym $mod+Shift+y exec "i3lock -n -f -c 121212"
 
-# start dmenu
-bindsym $mod+d exec dmenu_run_history -fn 'Inconsolata 14'
+# application launcher
+bindsym $mod+r exec rofi -show combi
 
 # toggle fullscreen
 bindsym $mod+f fullscreen toggle
@@ -119,7 +119,7 @@ bar {
 #exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status killall -SIGUSR1 i3status
+#set $refresh_i3status killall -SIGUSR1 i3status
 #bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 #bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 #bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
