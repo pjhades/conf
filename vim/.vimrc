@@ -35,6 +35,9 @@ if executable('rust-analyzer')
         \   'allowlist': ['rust'],
         \   'initialization_options': {
         \     'checkOnSave': v:false,
+        \     'diagnostics': {
+        \       'enable': v:false,
+        \     },
         \   },
         \ })
 endif
@@ -81,6 +84,7 @@ set laststatus=2
 set number
 set ruler
 set showcmd
+set hlsearch
 set incsearch
 set nowrapscan
 set nobackup
@@ -109,6 +113,10 @@ endfunction
 
 nnoremap tn :tabnext<CR>
 nnoremap tp :tabprev<CR>
+
+nnoremap <C-\>f :Files<CR>
+nnoremap <C-\>g :Rg<CR>
+nnoremap <C-\>w :Rg <C-r><C-w><CR>
 
 inoremap <C-\>{ {<CR>}<Esc>O
 
