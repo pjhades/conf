@@ -1,6 +1,4 @@
 call plug#begin()
-Plug 'preservim/nerdtree'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'prabirshrestha/vim-lsp'
@@ -122,3 +120,8 @@ inoremap <C-\>{ {<CR>}<Esc>O
 
 set t_Co=256
 colorscheme janah
+
+" Run netrw automatically if vim is invoked with no argument
+autocmd VimEnter * if argc() == 0 | Explore | endif
+" Use long format display in netrw
+let g:netrw_liststyle = 1
