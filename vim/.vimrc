@@ -1,9 +1,9 @@
 call plug#begin()
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'rust-lang/rust.vim'
-Plug 'fatih/vim-go'
 call plug#end()
 
 set shell=bash
