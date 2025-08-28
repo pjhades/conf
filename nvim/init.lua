@@ -113,7 +113,16 @@ vim.o.tabstop = 4
 vim.o.mouse = ""
 vim.o.termguicolors= true
 
+-- Always list files in long format
 vim.g.netrw_liststyle = 1
+-- Open netrw if no CLI argument is given
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    if vim.fn.argc() == 0 then
+      vim.cmd("Explore")
+    end
+  end,
+})
 
 vim.cmd.colorscheme('github_dark_colorblind')
 
