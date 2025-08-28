@@ -1,7 +1,10 @@
 plugins = {
+    { 'projekt0n/github-nvim-theme' },
     {
-        'nvim-tree/nvim-tree.lua',
-        lazy = false
+        'nvim-treesitter/nvim-treesitter',
+        branch = 'master',
+        lazy = false,
+        build = ':TSUpdate'
     },
     { 
         'ibhagwan/fzf-lua',
@@ -53,10 +56,10 @@ plugins = {
                             },
                         },
                         procMacro = {
-                            enable = true
+                            enable = true,
                         },
                     }
-	    	}
+                }
             })
         end,
     }
@@ -88,7 +91,7 @@ function setup_lazy()
     require('lazy').setup({
         spec = plugins,
         install = { colorscheme = { 'habamax' } },
-        checker = { enabled = true },
+        checker = { enabled = false },
     })
 end
 
@@ -107,8 +110,12 @@ vim.o.smartindent = true
 vim.o.expandtab = true
 vim.o.shiftwidth = 4
 vim.o.tabstop = 4
+vim.o.mouse = ""
+vim.o.termguicolors= true
 
-vim.cmd.colorscheme('lunaperche')
+vim.g.netrw_liststyle = 1
+
+vim.cmd.colorscheme('github_dark_colorblind')
 
 -- Shortcuts for fzf, see https://github.com/ibhagwan/fzf-lua?tab=readme-ov-file#buffers-and-files
 -- Start file searching
@@ -120,35 +127,5 @@ vim.keymap.set('n', '<C-\\>w', ':FzfLua grep_cword<CR>')
 -- Start grep
 vim.keymap.set('n', '<C-\\>s', ':FzfLua grep<CR>')
 
-
-------------- experimental -------------
-function setup_pckr()
-    local pckr_path = vim.fn.stdpath('data') .. '/pckr/pckr.nvim'
-
-    if not (vim.uv or vim.loop).fs_stat(pckr_path) then
-        vim.fn.system({
-            'git',
-            'clone',
-            '--filter=blob:none',
-            'https://github.com/lewis6991/pckr.nvim',
-            pckr_path
-        })
-    end
-
-    vim.opt.rtp:prepend(pckr_path)
-
-    require('pckr').add({
-        {
-            'pjhades/nvim-repolink',
-            run = function()
-                --vim.fn.system('./build.py build || .\\build.py build')
-                local out = vim.fn.system('pwd')
-                print(out)
-                print('SHIT')
-                --require('nvim_repolink')
-            end,
-        }
-    })
-end
-
---setup_pckr()
+vim.keymap.set('n', 'tn', ':tabn<CR>')
+vim.keymap.set('n', 'tp', ':tabp<CR>')
