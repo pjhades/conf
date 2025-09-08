@@ -58,6 +58,12 @@ plugins = {
                         procMacro = {
                             enable = true,
                         },
+                        checkOnSave = {
+                            enable = false,
+                        },
+                        diagnostics = {
+                            enable = false,
+                        },
                     }
                 }
             })
@@ -112,6 +118,7 @@ vim.o.shiftwidth = 4
 vim.o.tabstop = 4
 vim.o.mouse = ""
 vim.o.termguicolors= true
+vim.opt.laststatus = 3
 
 -- Always list files in long format
 vim.g.netrw_liststyle = 1
