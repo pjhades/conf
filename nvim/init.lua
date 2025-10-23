@@ -28,7 +28,7 @@ plugins = {
         'neovim/nvim-lspconfig',
         lazy = false,
         config = function()
-            require('lspconfig').rust_analyzer.setup({
+            vim.lsp.config('rust_analyzer', {
                 on_attach = function(client, bufnr)
                     -- See https://rust-analyzer.github.io/book/other_editors.html#nvim-lsp
                     vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
@@ -67,6 +67,7 @@ plugins = {
                     }
                 }
             })
+            vim.lsp.enable('rust_analyzer')
         end,
     }
 }
