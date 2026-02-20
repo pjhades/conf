@@ -23,13 +23,16 @@ plugins = {
         lazy = false,
         build = './build.py build || .\\build.py build',
         opts = {},
+        config = function()
+            require('nvim-repolink')
+        end,
     },
     {
         'neovim/nvim-lspconfig',
         lazy = false,
         config = function()
             vim.lsp.config('rust_analyzer', {
-                on_attach = function(client, bufnr)
+                on_attach = function(_client, bufnr)
                     -- See https://rust-analyzer.github.io/book/other_editors.html#nvim-lsp
                     vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
 
@@ -68,6 +71,26 @@ plugins = {
                 }
             })
             vim.lsp.enable('rust_analyzer')
+
+            vim.lsp.config('clangd', {
+                on_attach = function(_client, bufnr)
+                    vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
+                    vim.keymap.set('n', '<C-\\>d', vim.lsp.buf.definition)
+                    vim.keymap.set('n', '<C-\\>r', vim.lsp.buf.references)
+                    vim.keymap.set('n', '<C-\\>i', vim.lsp.buf.implementation)
+                    vim.keymap.set('n', '<C-\\>c', vim.lsp.buf.incoming_calls)
+                    vim.diagnostic.enable(false, { bufnr = bufnr })
+                end,
+                cmd = {'clangd', '--background-index', '--clang-tidy'},
+                settings = {
+                    ['clangd'] = {
+                        diagnostics = {
+                            enable = false,
+                        }
+                    }
+                }
+            })
+            vim.lsp.enable('clangd')
         end,
     }
 }
